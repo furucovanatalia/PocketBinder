@@ -1,0 +1,1147 @@
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: radial-gradient(circle at top, #1a1328, #090a0e 42%);
+        color: #fff;
+        font:
+          16px -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+      }
+      .app {
+        max-width: 430px;
+        min-height: 100vh;
+        margin: auto;
+        padding: 28px 20px;
+      }
+      .screen {
+        display: none;
+      }
+      .screen.active {
+        display: block;
+        animation: a 0.25s;
+      }
+      @keyframes a {
+        from {
+          opacity: 0;
+          transform: translateY(8px);
+        }
+      }
+      .brand {
+        text-align: center;
+        padding-top: 55px;
+      }
+      .logo {
+        width: 105px;
+        height: 125px;
+        margin: auto;
+        background: linear-gradient(145deg, #25262d, #0b0c10);
+        border-radius: 20px;
+        box-shadow:
+          0 20px 55px #000,
+          0 0 35px #9653ed44;
+        position: relative;
+      }
+      .logo:before {
+        content: "";
+        position: absolute;
+        inset: 25px 24px 35px;
+        border: 3px solid #9b59f2;
+        border-radius: 9px;
+      }
+      .logo:after {
+        content: "";
+        position: absolute;
+        right: -8px;
+        top: 53px;
+        width: 28px;
+        height: 28px;
+        border-radius: 9px;
+        background: #292a31;
+      }
+      h1 {
+        font-size: 38px;
+        margin: 26px 0 8px;
+        letter-spacing: -2px;
+      }
+      .v {
+        color: #9b59f2;
+      }
+      .tag {
+        color: #a2a4ad;
+        margin-bottom: 48px;
+      }
+      .action {
+        width: 100%;
+        height: 70px;
+        border: 1px solid #292b34;
+        border-radius: 17px;
+        background: #15161c;
+        color: #fff;
+        margin: 12px 0;
+        padding: 0 18px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        font-weight: 650;
+      }
+      .primary,
+      .create {
+        background: linear-gradient(135deg, #a45cf3, #6d35bd);
+        border: 0;
+      }
+      .ico {
+        font-size: 25px;
+      }
+      .arrow {
+        margin-left: auto;
+        font-size: 26px;
+      }
+      .top {
+        display: flex;
+        align-items: center;
+        padding: 8px 0 25px;
+      }
+      .back {
+        border: 0;
+        background: none;
+        color: white;
+        font-size: 30px;
+      }
+      .top h2 {
+        font-size: 20px;
+        margin: auto;
+        transform: translateX(-15px);
+      }
+      label {
+        display: block;
+        font-size: 14px;
+        font-weight: 650;
+        margin: 18px 0 9px;
+      }
+      .field {
+        width: 100%;
+        height: 52px;
+        border: 1px solid #2b2d35;
+        background: #121319;
+        color: #fff;
+        border-radius: 13px;
+        padding: 0 15px;
+      }
+      .preview {
+        width: 145px;
+        height: 175px;
+        margin: 5px auto 28px;
+        border-radius: 16px;
+        background: #17181d;
+        box-shadow: 0 18px 38px #000;
+      }
+      .colors,
+      .layouts {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .color {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        border: 4px solid transparent;
+        flex: 0 0 35px;
+      }
+      .selected {
+        box-shadow: 0 0 0 2px #fff;
+      }
+      .layout {
+        flex: 1;
+        height: 85px;
+        border: 1px solid #2b2d35;
+        border-radius: 13px;
+        background: #121319;
+        color: #aaa;
+      }
+      .layout.on {
+        border-color: #9b59f2;
+        color: #fff;
+      }
+      .create {
+        width: 100%;
+        height: 56px;
+        border-radius: 14px;
+        color: #fff;
+        margin-top: 28px;
+        font-weight: 700;
+      }
+      .albums {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 15px;
+      }
+      .card {
+        border: 0;
+        background: none;
+        color: #fff;
+        text-align: left;
+      }
+      .book {
+        height: 180px;
+        border-radius: 10px 18px 18px 10px;
+        box-shadow: 0 16px 28px #0009;
+        border-left: 8px solid #ffffff12;
+      }
+      .card b {
+        display: block;
+        margin-top: 9px;
+      }
+      .card small,
+      .empty,
+      .pageLabel {
+        color: #9295a1;
+      }
+      .empty {
+        text-align: center;
+        padding-top: 100px;
+      }
+      .pageLabel {
+        text-align: center;
+      }
+      .page {
+        margin: 20px auto;
+        background: #07080a;
+        border: 1px solid #2b2d34;
+        border-radius: 14px;
+        padding: 11px;
+        display: grid;
+        gap: 8px;
+        aspect-ratio: 0.72;
+        box-shadow: 0 22px 50px #000;
+      }
+      .pocket {
+        border: 1px dashed #3a3c44;
+        border-radius: 6px;
+        display: grid;
+        place-items: center;
+        color: #484a53;
+        font-size: 28px;
+        background: #0e0f12;
+      }
+      .pager {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .nav,
+      .newpage {
+        border: 1px solid #31333c;
+        background: #171820;
+        color: #fff;
+      }
+      .nav {
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        font-size: 25px;
+      }
+      .newpage {
+        padding: 13px 18px;
+        border-radius: 14px;
+      }
+
+      .style-options {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+      .style-choice {
+        height: 108px;
+        border: 1px solid #2b2d35;
+        border-radius: 14px;
+        background: #121319;
+        color: #aaa;
+        padding: 10px;
+      }
+      .style-choice.on {
+        border-color: #9b59f2;
+        color: #fff;
+        box-shadow: inset 0 0 0 1px #9b59f2;
+      }
+      .style-demo {
+        height: 57px;
+        margin: 0 auto 7px;
+        width: 58px;
+        border-radius: 6px;
+        background: #08090b;
+        position: relative;
+        border: 1px solid #333640;
+      }
+      .style-demo.realistic:before {
+        content: "";
+        position: absolute;
+        inset: -5px;
+        background: var(--demo-color, #17181d);
+        border-radius: 8px;
+        z-index: -1;
+      }
+      .style-demo.realistic:after {
+        content: "○\A○\A○\A○";
+        white-space: pre;
+        position: absolute;
+        left: -12px;
+        top: 2px;
+        line-height: 13px;
+        color: #b8bbc5;
+        font-size: 12px;
+      }
+      .page-wrap {
+        position: relative;
+        margin: 20px auto 18px;
+        padding: 0;
+      }
+      .page-wrap.realistic {
+        padding: 9px 8px 9px 21px;
+        border-radius: 17px;
+        background: var(--binder-color, #17181d);
+        box-shadow: 0 22px 50px #000;
+      }
+      .page-wrap.realistic:before {
+        content: "○  ○  ○  ○";
+        position: absolute;
+        left: 2px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 17px;
+        white-space: pre-wrap;
+        line-height: 48px;
+        color: #c1c4cc;
+        font-size: 15px;
+        text-shadow: 0 1px 3px #000;
+      }
+      .page-wrap .page {
+        margin: 0;
+      }
+
+      /* PocketBinder v0.3 — Cards */
+      #binder {
+        margin-left: -10px;
+        margin-right: -10px;
+      }
+      #binder .top {
+        padding: 4px 10px 4px;
+      }
+      #binder .top h2 {
+        font-size: 18px;
+      }
+      #binder .page-wrap {
+        width: 100%;
+        margin: 5px auto 8px;
+        touch-action: pan-y;
+        overflow: hidden;
+      }
+      #binder .page-wrap.realistic {
+        padding: 8px 7px 8px 20px;
+      }
+      #binder .page {
+        aspect-ratio: 0.715;
+        padding: 8px;
+        gap: 6px;
+      }
+      .pocket {
+        position: relative;
+        overflow: hidden;
+        padding: 0;
+        border-style: solid;
+      }
+      .pocket img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .pocket.has-card {
+        border-color: #272931;
+      }
+      .pocket input {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        display: block;
+        font-size: 0;
+        cursor: pointer;
+      }
+      .pocket {
+        -webkit-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+      }
+      .pager {
+        display: grid;
+        grid-template-columns: 34px 1fr 34px;
+        align-items: center;
+        gap: 10px;
+        padding: 0 8px;
+      }
+      .nav,
+      .addPage {
+        width: 34px;
+        height: 34px;
+        border: 1px solid #31333c;
+        background: #171820;
+        color: #fff;
+        border-radius: 50%;
+        font-size: 19px;
+        padding: 0;
+      }
+      .pageCenter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+      }
+      .pageCount {
+        font-size: 13px;
+        color: #9295a1;
+      }
+      .addPage {
+        font-size: 20px;
+      }
+      .slide-left {
+        animation: slideLeft 0.22s ease;
+      }
+      .slide-right {
+        animation: slideRight 0.22s ease;
+      }
+      @keyframes slideLeft {
+        from {
+          opacity: 0.35;
+          transform: translateX(24px) rotateY(-2deg);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      @keyframes slideRight {
+        from {
+          opacity: 0.35;
+          transform: translateX(-24px) rotateY(2deg);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      .edge-left {
+        animation: bumpLeft 0.18s ease;
+      }
+      .edge-right {
+        animation: bumpRight 0.18s ease;
+      }
+      @keyframes bumpLeft {
+        50% {
+          transform: translateX(-9px);
+        }
+      }
+      @keyframes bumpRight {
+        50% {
+          transform: translateX(9px);
+        }
+      }
+
+      /* v0.3.1 — Adjust Card */
+      .modal {
+        position: fixed;
+        inset: 0;
+        background: #08090df2;
+        z-index: 50;
+        display: none;
+        flex-direction: column;
+        padding: max(18px, env(safe-area-inset-top)) 16px
+          max(18px, env(safe-area-inset-bottom));
+      }
+      .modal.open {
+        display: flex;
+      }
+      .modalTop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 48px;
+      }
+      .modalTop h3 {
+        margin: 0;
+        font-size: 18px;
+      }
+      .modalBtn {
+        border: 0;
+        background: none;
+        color: #fff;
+        font-weight: 650;
+        font-size: 16px;
+      }
+      .modalBtn.done {
+        color: #b978ff;
+      }
+      .adjustHelp {
+        text-align: center;
+        color: #a5a7b0;
+        font-size: 13px;
+        margin: 6px 0 12px;
+      }
+      .adjustStage {
+        position: relative;
+        flex: 1;
+        min-height: 0;
+        display: grid;
+        place-items: center;
+      }
+      .adjustCanvas {
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+        touch-action: none;
+        border-radius: 8px;
+      }
+      .corner {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border: 3px solid #fff;
+        background: #9b59f2;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 2px 12px #000;
+        touch-action: none;
+      }
+      .corner:after {
+        content: "";
+        position: absolute;
+        inset: 7px;
+        border-radius: 50%;
+        background: #fff;
+      }
+      .quadLine {
+        position: absolute;
+        height: 2px;
+        background: #b978ff;
+        transform-origin: 0 50%;
+        pointer-events: none;
+      }
+      .sheetBackdrop {
+        position: fixed;
+        inset: 0;
+        background: #0008;
+        z-index: 60;
+        display: none;
+      }
+      .sheetBackdrop.open {
+        display: block;
+      }
+      .cardSheet {
+        position: absolute;
+        left: 12px;
+        right: 12px;
+        bottom: max(12px, env(safe-area-inset-bottom));
+        background: #1b1c23;
+        border: 1px solid #33353e;
+        border-radius: 20px;
+        padding: 8px;
+        box-shadow: 0 24px 60px #000;
+      }
+      .sheetAction {
+        width: 100%;
+        height: 54px;
+        border: 0;
+        border-bottom: 1px solid #30323a;
+        background: none;
+        color: #fff;
+        text-align: left;
+        padding: 0 16px;
+        font-size: 16px;
+      }
+      .sheetAction:last-child {
+        border-bottom: 0;
+      }
+      .sheetAction.delete {
+        color: #ff6969;
+      }
+
+      /* v0.3.2 — Card Polish: fixed pocket geometry */
+      #binder .page {
+        aspect-ratio: auto;
+        align-content: start;
+        grid-auto-rows: auto;
+      }
+      .pocket {
+        width: 100%;
+        aspect-ratio: 63 / 88;
+        min-width: 0;
+        min-height: 0;
+        height: auto;
+        box-sizing: border-box;
+        overflow: hidden;
+        flex: none;
+      }
+      .pocket img {
+        position: absolute;
+        inset: 3px;
+        width: calc(100% - 6px);
+        height: calc(100% - 6px);
+        max-width: none;
+        max-height: none;
+        object-fit: fill;
+        border-radius: 5px;
+      }
+      .pocket > span {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+      }
+
+      /* v0.4.0 — Precision Magnifier */
+      .corner {
+        width: 24px;
+        height: 24px;
+        border-width: 2px;
+      }
+      .corner:after {
+        inset: 6px;
+      }
+      #magnifier {
+        position: absolute;
+        width: 112px;
+        height: 112px;
+        border-radius: 56px;
+        border: 3px solid #fff;
+        background: #111;
+        box-shadow: 0 10px 35px #000b;
+        z-index: 80;
+        display: none;
+        overflow: hidden;
+        pointer-events: none;
+      }
+      #magnifier.show {
+        display: block;
+      }
+      #magnifier canvas {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      #magnifier:before,
+      #magnifier:after {
+        content: "";
+        position: absolute;
+        background: #b978ff;
+        z-index: 2;
+      }
+      #magnifier:before {
+        left: 50%;
+        top: 0;
+        width: 1px;
+        height: 100%;
+      }
+      #magnifier:after {
+        top: 50%;
+        left: 0;
+        height: 1px;
+        width: 100%;
+      }
+
+      /* v0.4.1 — Smart arrows + PocketBinder identity */
+      .nav.hidden {
+        visibility: hidden;
+        pointer-events: none;
+      }
+      .brand .logo {
+        width: 150px;
+        height: 150px;
+        background: none;
+        box-shadow: none;
+        border-radius: 0;
+      }
+      .brand .logo:before {
+        content: "";
+        position: absolute;
+        inset: 5px 0 0;
+        background: #8f50d8;
+        border: 0;
+        border-radius: 46% 54% 42% 58% / 55% 42% 58% 45%;
+        transform: rotate(-8deg);
+        box-shadow: 0 0 38px #9653ed33;
+      }
+      .brand .logo:after {
+        content: "PB";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        right: auto;
+        width: 86px;
+        height: 104px;
+        display: grid;
+        place-items: center;
+        transform: translate(-50%, -50%) rotate(3deg);
+        background: #f2eef8;
+        color: #21192c;
+        border-radius: 12px 19px 19px 10px;
+        border-left: 8px solid #d8cfe5;
+        font-size: 31px;
+        font-weight: 900;
+        letter-spacing: -3px;
+        box-shadow: 0 15px 30px #0008;
+      }
+      #moveGrid {
+        width: min(88vw, 360px);
+        margin: 16px auto;
+        display: grid;
+        gap: 8px;
+        max-height: 65vh;
+        overflow: auto;
+      }
+      #moveGrid .pocket {
+        aspect-ratio: 2.5/3.5;
+        min-height: 0;
+        display: grid;
+        place-items: center;
+        font-size: 14px;
+        color: #aaa;
+      }
+      #moveGrid .pocket.current {
+        outline: 2px solid #b978ff;
+      }
+      #moveGrid .pocket.occupied:after {
+        content: "SWAP";
+        font-size: 10px;
+        color: #c99cff;
+      }
+      #moveGrid .pocket.empty:after {
+        content: "MOVE";
+        font-size: 10px;
+        color: #aaa;
+      }
+      /* v0.6.0 — Fullscreen Card View */
+      #cardView {
+        align-items: center;
+        justify-content: center;
+        background: #05060aee;
+        padding: 24px;
+      }
+      .cardViewClose {
+        position: absolute;
+        top: max(18px, env(safe-area-inset-top));
+        right: 18px;
+        width: 44px;
+        height: 44px;
+        border: 1px solid #343640;
+        border-radius: 50%;
+        background: #171820;
+        color: #fff;
+        font-size: 25px;
+        z-index: 2;
+      }
+      #cardViewImg {
+        display: block;
+        max-width: min(88vw, 430px);
+        max-height: 82vh;
+        width: auto;
+        height: auto;
+        border-radius: 14px;
+        box-shadow: 0 28px 80px #000;
+      }
+
+      /* v0.6.1 — Album Covers */
+      .coverPicker {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin: 8px 0 18px;
+      }
+      .coverThumb {
+        width: 72px;
+        height: 96px;
+        border-radius: 10px;
+        border: 1px solid #343640;
+        background: #17181d;
+        object-fit: cover;
+      }
+      .coverPickBtn {
+        flex: 1;
+        padding: 13px;
+        border: 1px solid #343640;
+        border-radius: 12px;
+        background: #171820;
+        color: #fff;
+        font-weight: 700;
+      }
+      .book.has-cover {
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+      }
+
+      /* v0.6.2 — Edit Album */
+      .albumCard {
+        position: relative;
+      }
+      .albumCard.editing {
+        outline: 2px solid #b978ff;
+      }
+      #editAlbumModal .sheet {
+        max-height: 86vh;
+        overflow: auto;
+      }
+      .editCoverRow {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin: 8px 0 18px;
+      }
+      #editCoverThumb {
+        width: 72px;
+        height: 96px;
+        border-radius: 10px;
+        border: 1px solid #343640;
+        background: #17181d;
+        object-fit: cover;
+      }
+
+      /* v0.7.0 — My Albums polish */
+      .albumCard,
+      .albumCard * {
+        -webkit-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+      }
+      .albumCard {
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+      }
+      .albums {
+        gap: 16px;
+      }
+      .albumCard {
+        padding: 14px 12px 13px;
+        border-radius: 18px;
+        transition:
+          transform 0.16s ease,
+          border-color 0.16s ease,
+          background 0.16s ease;
+      }
+      .albumCard:active {
+        transform: scale(0.975);
+      }
+      .albumCard .book {
+        width: 100%;
+        max-width: 150px;
+        margin-inline: auto;
+        box-shadow: 0 16px 32px #0008;
+      }
+      .albumCard b {
+        display: block;
+        margin-top: 11px;
+        font-size: 15px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .albumCard small {
+        display: block;
+        margin-top: 4px;
+        color: #858791;
+      }
+      .albumsHint {
+        text-align: center;
+        color: #777984;
+        font-size: 12px;
+        margin: 2px 0 16px;
+      }
+
+      /* v0.8.0 — Share Snapshot */
+      .shareBtn {
+        margin: 18px auto 0;
+        display: block;
+        padding: 12px 20px;
+        border: 1px solid #8d49d8;
+        border-radius: 999px;
+        background: #17121f;
+        color: #d39aff;
+        font-weight: 800;
+      }
+      .shareStatus {
+        color: #aaa;
+        margin: 8px 0 16px;
+        line-height: 1.45;
+      }
+      .shareLink {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px;
+        border: 1px solid #343640;
+        border-radius: 12px;
+        background: #0d0e12;
+        color: #ddd;
+      }
+      .nativeShareBtn {
+        width: 100%;
+        margin: 10px 0 0;
+        padding: 13px 18px;
+        border: 1px solid #8d49d8;
+        border-radius: 14px;
+        background: #8d49d8;
+        color: white;
+        font-weight: 800;
+        font-size: 16px;
+      }
+      .viewerBadge {
+        text-align: center;
+        color: #b978ff;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        margin: 10px 0;
+      }
+      .share-view .back,
+      .share-view .addPage,
+      .share-view .shareBtn {
+        display: none !important;
+      }
+      .share-view .pocket.empty {
+        pointer-events: none;
+      }
+
+      /* v0.9.0 — Album Owner */
+      .ownerLine {
+        text-align: center;
+        color: #aaa;
+        font-size: 14px;
+        font-style: italic;
+        margin: -8px 0 10px;
+      }
+
+      .ownerFieldBlock {
+        display: block;
+        width: 100%;
+        margin: 0 0 2px;
+      }
+      .ownerFieldBlock label {
+        display: block;
+      }
+      .optionalText {
+        color: #777;
+        font-weight: 400;
+      }
+
+      .sharedPlaque {
+        display: none;
+        margin: 22px auto 8px;
+        width: max-content;
+        max-width: 82%;
+        padding: 12px 18px;
+        border: 1px solid #2e3038;
+        border-radius: 18px;
+        background: linear-gradient(145deg, #15161c, #0b0c10);
+        box-shadow:
+          0 12px 30px #0008,
+          0 0 24px #9653ed18;
+        align-items: center;
+        gap: 13px;
+      }
+      .share-view .sharedPlaque {
+        display: flex;
+      }
+      .plaqueLogo {
+        width: 52px;
+        height: 52px;
+        position: relative;
+        flex: 0 0 52px;
+      }
+      .plaqueLogo:before {
+        content: "";
+        position: absolute;
+        inset: 2px;
+        background: #8f50d8;
+        border-radius: 46% 54% 42% 58% / 55% 42% 58% 45%;
+        transform: rotate(-8deg);
+        box-shadow: 0 0 18px #9653ed33;
+      }
+      .plaqueLogo:after {
+        content: "PB";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 31px;
+        height: 38px;
+        display: grid;
+        place-items: center;
+        transform: translate(-50%, -50%) rotate(3deg);
+        background: #f2eef8;
+        color: #21192c;
+        border-radius: 5px 8px 8px 4px;
+        border: 1px solid #cfc6dc;
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: -1px;
+        box-shadow: inset -4px 0 0 #d9d1e3;
+      }
+      .plaqueText {
+        line-height: 1.05;
+        text-align: left;
+      }
+      .plaqueText strong {
+        display: block;
+        color: #f2eef8;
+        font-size: 17px;
+        letter-spacing: -0.4px;
+      }
+      .plaqueText span {
+        display: block;
+        color: #8f50d8;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 1.7px;
+        margin-top: 5px;
+        text-transform: uppercase;
+      }
+
+      .layoutAdd {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: 1px solid #31333c;
+        background: #171820;
+        color: #b76cff;
+        font-size: 19px;
+        font-weight: 800;
+      }
+      .pageCenter {
+        gap: 9px;
+      }
+      .layoutChoices {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-top: 16px;
+      }
+      .layoutChoice {
+        height: 92px;
+        border: 1px solid #343640;
+        border-radius: 14px;
+        background: #121319;
+        color: #ddd;
+        font-size: 20px;
+        font-weight: 800;
+      }
+      .layoutChoice:active {
+        border-color: #9b59f2;
+      }
+
+      .deletePageBtn {
+        display: block;
+        margin: 14px auto 0;
+        border: 0;
+        background: transparent;
+        color: #6f717c;
+        font-size: 13px;
+        padding: 8px 14px;
+      }
+      .deletePageBtn:active {
+        color: #c9c9d0;
+      }
+
+      .share-view .deletePageBtn {
+        display: none !important;
+      }
+
+      .backupPanel {
+        margin: 22px 0 4px;
+        padding: 16px;
+        border: 1px solid #292b33;
+        border-radius: 16px;
+        background: #111218;
+      }
+      .backupPanel h3 {
+        margin: 0 0 7px;
+        font-size: 16px;
+      }
+      .backupPanel p {
+        margin: 0 0 13px;
+        color: #9295a1;
+        font-size: 13px;
+        line-height: 1.45;
+      }
+      .backupActions {
+        display: flex;
+        gap: 10px;
+      }
+      .backupActions button {
+        flex: 1;
+        padding: 12px 8px;
+        border-radius: 12px;
+        border: 1px solid #343640;
+        background: #171820;
+        color: #ddd;
+        font-weight: 700;
+      }
+
+      .settingsCard {
+        position: relative;
+        margin-top: 18px;
+        padding: 18px;
+        border: 1px solid #292b33;
+        border-radius: 16px;
+        background: #111218;
+      }
+      .settingsCard h3 {
+        margin: 0 0 7px;
+        font-size: 17px;
+      }
+      .settingsCard p {
+        margin: 0 34px 15px 0;
+        color: #9295a1;
+        font-size: 13px;
+        line-height: 1.45;
+      }
+      .helpBtn {
+        position: absolute;
+        right: 14px;
+        top: 14px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 1px solid #3b3d47;
+        background: #191a21;
+        color: #b978ff;
+        font-weight: 900;
+        font-size: 16px;
+      }
+      .helpSteps {
+        text-align: left;
+        color: #c8c8cf;
+        line-height: 1.55;
+        font-size: 14px;
+        margin: 12px 0 4px;
+      }
+      .helpSteps b {
+        color: #fff;
+      }
+
+      /* v0.9.6.1 — Adjust Card touch selection fix */
+      #adjustModal,
+      #adjustModal * {
+        -webkit-user-select: none !important;
+        user-select: none !important;
+        -webkit-touch-callout: none !important;
+      }
+      #adjustModal {
+        -webkit-tap-highlight-color: transparent;
+      }
+      .adjustStage,
+      .corner,
+      .adjustCanvas {
+        touch-action: none !important;
+      }
